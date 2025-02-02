@@ -234,9 +234,12 @@ int main()
     cout << endl << "Loading file..." << endl;
 	bool isLoaded = try_load_SRLFP_file("Y-10_t.txt", cost_matrix, widths);
 	if (!isLoaded)
-    cout << "File not found" << endl;
+    {
+        printf("File not found\n");
         return 1;
-    cout << "File loaded!" << endl;
+    }
+
+    printf("file loaded!\n");
     cout << endl << "Serial BnB" << endl;
     global_best_cost = numeric_limits<double>::max();
     find_minimal_permutation_serial_BnB(cost_matrix, widths);

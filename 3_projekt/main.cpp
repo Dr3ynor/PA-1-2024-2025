@@ -78,7 +78,7 @@ void pageRank(const std::vector<std::vector<int>>& graph, const std::vector<int>
     double delta = 1.0;
     int iteration = 0;
     printf("--------------------\n");
-    printf("%d\n",numVertices);
+    printf("Number of vertices: %d\n",numVertices);
     printf("--------------------\n");
     while (delta > EPSILON && iteration < MAX_ITERATIONS) {
         delta = 0.0;
